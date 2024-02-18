@@ -14,6 +14,7 @@ from dataclasses import dataclass
 import torch
 import torch.nn as nn
 from torch.nn import functional as F
+from einops import rearrange
 
 class LayerNorm(nn.Module):
     """ LayerNorm but with an optional bias. PyTorch doesn't support simply bias=False """
@@ -70,12 +71,11 @@ class CausalSelfAttention(nn.Module):
         '''
 
         B, T, C = x.size() # batch size, sequence length, embedding dimensionality (n_embd)
-
         # calculate query, key, values for all heads in batch and move head forward to be the batch dim
         q, k, v  = self.c_attn(x).split(self.n_embd, dim=2)
-        k = k.view(B, T, self.n_head, C // self.n_head).transpose(1, 2) # (B, nh, T, hs)
-        q = q.view(B, T, self.n_head, C // self.n_head).transpose(1, 2) # (B, nh, T, hs)
-        v = v.view(B, T, self.n_head, C // self.n_head).transpose(1, 2) # (B, nh, T, hs)
+        q = rearrange(q, 'b t (n h) -> b n t h', n=self.n_head)
+        k = rearrange(k, 'b t (n h) -> b n t h', n=self.n_head)
+        v = rearrange(v, 'b t (n h) -> b n t h', n=self.n_head)
 
         if self.config.QKLayernorm==True:
             q = self.ln_q(q)
@@ -85,21 +85,23 @@ class CausalSelfAttention(nn.Module):
         if self.flash:
             # efficient attention using Flash Attention CUDA kernels
             y = torch.nn.functional.scaled_dot_product_attention(q, k, v, attn_mask=None, dropout_p=self.dropout if self.training else 0, is_causal=True)
-
         else:
-            # manual implementation of attention
-            att = (q @ k.transpose(-2, -1)) * (1.0 / math.sqrt(k.size(-1)))
-            att = att.masked_fill(self.bias[:,:,:T,:T] == 0, float('-inf'))
-            att = F.softmax(att, dim=-1)
-            att = self.attn_dropout(att)
-            y = att @ v # (B, nh, T, T) x (B, nh, T, hs) -> (B, nh, T, hs)
-
-        y = y.transpose(1, 2).contiguous().view(B, T, C) # re-assemble all head outputs side by side
-
+            # scale dot-product attention with causal mask
+            # (B N T H_) x (B N T H_) -> (B N T T)
+            pre_softmax_att = torch.einsum('bnth,bnsh->bnts', q, k) * (1.0 / math.sqrt(k.size(-1)))
+            pre_softmax_att = pre_softmax_att.masked_fill(self.causal_mask[:, :, :T, :T] == 0, float('-inf'))
+            attn_mask = F.softmax(pre_softmax_att, dim=-1)
+            # apply attention to values
+            # (B N T T_) x (B N T_ H) -> (B N T H)
+            y = torch.einsum('bnts,bnsh->bnth', attn_mask, v)
+       
+        # re-assemble all head outputs side by side
+        y = rearrange(y, 'b n t h -> b t (n h)') 
         # output projection
         y = self.resid_dropout(self.c_proj(y))
 
         return y
+
 
 class MLP(nn.Module):
 

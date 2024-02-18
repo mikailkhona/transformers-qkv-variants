@@ -1,0 +1,6 @@
+graphviz
+networkx 
+numpy
+pandas
+torch
+

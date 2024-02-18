@@ -1,0 +1,8 @@
+2024-02-04 19:35:50,784 INFO    StreamThr :1955567 [internal.py:wandb_internal():86] W&B internal server running at pid: 1955567, started at: 2024-02-04 19:35:50.784006
+2024-02-04 19:35:50,785 DEBUG   HandlerThread:1955567 [handler.py:handle_request():144] handle_request: status
+2024-02-04 19:35:50,786 INFO    WriterThread:1955567 [datastore.py:open_for_write():85] open: /home/bizon/temp-cot/transformers-learning-dynamics/nanoGPT_extension/wandb/run-20240204_193550-aza3ry9a/run-aza3ry9a.wandb
+2024-02-04 19:35:50,787 DEBUG   SenderThread:1955567 [sender.py:send():375] send: header
+2024-02-04 19:35:50,787 DEBUG   SenderThread:1955567 [sender.py:send():375] send: run
+2024-02-04 19:35:52,354 INFO    SenderThread:1955567 [dir_watcher.py:__init__():219] watching files in: /home/bizon/temp-cot/transformers-learning-dynamics/nanoGPT_extension/wandb/run-20240204_193550-aza3ry9a/files
+2024-02-04 19:35:52,354 INFO    SenderThread:1955567 [sender.py:_start_run_threads():1124] run started: aza3ry9a with start time 1707093350.783343
+2024-02-04 19:35:53,787 INFO    MainThread:1955567 [internal.py:handle_exit():76] Internal process exited

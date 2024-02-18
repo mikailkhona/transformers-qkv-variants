@@ -1,0 +1,8 @@
+{'deploy': True, 'tag': 'scratch', 'seed': 0, 'out_dir': 'out_qklayernorm', 'eval_interval': 1000, 'log_interval': 100, 'save_ckpt_interval': 1, 'eval_iters': 200, 'eval_only': False, 'always_save_checkpoint': True, 'init_from': 'scratch', 'wandb_project': 'qklayernorm', 'wandb_run_name': 'gpt', 'data_dir_train': '/home/bizon/temp-cot/transformers-learning-dynamics/tokenized_train_data.npy', 'data_dir_eval': '/home/bizon/temp-cot/transformers-learning-dynamics/tokenized_eval_data.npy', 'gradient_accumulation_steps': 1, 'batch_size': 256, 'block_size': 512, 'n_layer': 12, 'n_head': 12, 'n_embd': 768, 'dropout': 0.0, 'bias': False, 'QKlayernorm': True, 'learning_rate': 0.0006, 'max_iters': 40000, 'optimizer': 'AdamW', 'weight_decay': 0.1, 'beta1': 0.9, 'beta2': 0.95, 'grad_clip': 1.0, 'decay_lr': True, 'warmup_iters': 20, 'lr_decay_iters': 600000, 'min_lr': 0.0006, 'backend': 'nccl', 'device': 'cuda', 'compile': True, 'top_k': 10, 'temperature': 1, 'num_samples_generated_for_accuracy': 1}
+tokens per iteration will be: 131,072
+> /home/bizon/temp-cot/transformers-learning-dynamics/nanoGPT_extension/train_ntt_qklayernorm_ddp.py(97)main()
+-> train_dataloader, val_dataloader = get_dataloader(
+(Pdb) --KeyboardInterrupt--
+(Pdb) --KeyboardInterrupt--
+(Pdb) --KeyboardInterrupt--
+(Pdb) 

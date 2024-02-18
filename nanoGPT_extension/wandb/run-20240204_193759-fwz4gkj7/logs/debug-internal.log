@@ -1,0 +1,175 @@
+2024-02-04 19:37:59,915 INFO    StreamThr :1956269 [internal.py:wandb_internal():86] W&B internal server running at pid: 1956269, started at: 2024-02-04 19:37:59.914888
+2024-02-04 19:37:59,916 DEBUG   HandlerThread:1956269 [handler.py:handle_request():144] handle_request: status
+2024-02-04 19:37:59,918 INFO    WriterThread:1956269 [datastore.py:open_for_write():85] open: /home/bizon/temp-cot/transformers-learning-dynamics/nanoGPT_extension/wandb/run-20240204_193759-fwz4gkj7/run-fwz4gkj7.wandb
+2024-02-04 19:37:59,918 DEBUG   SenderThread:1956269 [sender.py:send():375] send: header
+2024-02-04 19:37:59,919 DEBUG   SenderThread:1956269 [sender.py:send():375] send: run
+2024-02-04 19:38:00,144 INFO    SenderThread:1956269 [dir_watcher.py:__init__():219] watching files in: /home/bizon/temp-cot/transformers-learning-dynamics/nanoGPT_extension/wandb/run-20240204_193759-fwz4gkj7/files
+2024-02-04 19:38:00,144 INFO    SenderThread:1956269 [sender.py:_start_run_threads():1124] run started: fwz4gkj7 with start time 1707093479.913615
+2024-02-04 19:38:00,144 DEBUG   SenderThread:1956269 [sender.py:send_request():402] send_request: summary_record
+2024-02-04 19:38:00,144 INFO    SenderThread:1956269 [sender.py:_save_file():1378] saving file wandb-summary.json with policy end
+2024-02-04 19:38:00,149 DEBUG   HandlerThread:1956269 [handler.py:handle_request():144] handle_request: check_version
+2024-02-04 19:38:00,149 DEBUG   SenderThread:1956269 [sender.py:send_request():402] send_request: check_version
+2024-02-04 19:38:00,245 DEBUG   HandlerThread:1956269 [handler.py:handle_request():144] handle_request: run_start
+2024-02-04 19:38:00,249 DEBUG   HandlerThread:1956269 [system_info.py:__init__():31] System info init
+2024-02-04 19:38:00,249 DEBUG   HandlerThread:1956269 [system_info.py:__init__():46] System info init done
+2024-02-04 19:38:00,249 INFO    HandlerThread:1956269 [system_monitor.py:start():181] Starting system monitor
+2024-02-04 19:38:00,249 INFO    SystemMonitor:1956269 [system_monitor.py:_start():145] Starting system asset monitoring threads
+2024-02-04 19:38:00,250 INFO    HandlerThread:1956269 [system_monitor.py:probe():201] Collecting system info
+2024-02-04 19:38:00,251 INFO    SystemMonitor:1956269 [interfaces.py:start():190] Started cpu monitoring
+2024-02-04 19:38:00,252 INFO    SystemMonitor:1956269 [interfaces.py:start():190] Started disk monitoring
+2024-02-04 19:38:00,252 INFO    SystemMonitor:1956269 [interfaces.py:start():190] Started gpu monitoring
+2024-02-04 19:38:00,252 INFO    SystemMonitor:1956269 [interfaces.py:start():190] Started memory monitoring
+2024-02-04 19:38:00,253 INFO    SystemMonitor:1956269 [interfaces.py:start():190] Started network monitoring
+2024-02-04 19:38:00,287 DEBUG   HandlerThread:1956269 [system_info.py:probe():195] Probing system
+2024-02-04 19:38:00,289 DEBUG   HandlerThread:1956269 [system_info.py:_probe_git():180] Probing git
+2024-02-04 19:38:00,291 ERROR   HandlerThread:1956269 [git.py:root():69] git root error: Cmd('git') failed due to: exit code(128)
+  cmdline: git rev-parse --show-toplevel
+  stderr: 'fatal: not a git repository: /home/bizon/temp-cot/transformers-learning-dynamics/nanoGPT_extension/../.git/modules/nanoGPT_extension'
+2024-02-04 19:38:00,291 DEBUG   HandlerThread:1956269 [system_info.py:_probe_git():188] Probing git done
+2024-02-04 19:38:00,292 DEBUG   HandlerThread:1956269 [system_info.py:probe():240] Probing system done
+2024-02-04 19:38:00,292 DEBUG   HandlerThread:1956269 [system_monitor.py:probe():210] {'os': 'Linux-5.19.0-46-generic-x86_64-with-glibc2.35', 'python': '3.10.6', 'heartbeatAt': '2024-02-05T00:38:00.287677', 'startedAt': '2024-02-05T00:37:59.909655', 'docker': None, 'cuda': None, 'args': (), 'state': 'running', 'program': '/home/bizon/temp-cot/transformers-learning-dynamics/nanoGPT_extension/train_ntt_qklayernorm_ddp.py', 'codePath': 'train_ntt_qklayernorm_ddp.py', 'git': {'remote': None, 'commit': None}, 'email': 'mikailkhona@gmail.com', 'root': '/home/bizon/temp-cot/transformers-learning-dynamics/nanoGPT_extension', 'host': 'dl', 'username': 'bizon', 'executable': '/usr/bin/python3', 'cpu_count': 32, 'cpu_count_logical': 64, 'cpu_freq': {'current': 2.195734374999999, 'min': 1800.0, 'max': 3600.0}, 'cpu_freq_per_core': [{'current': 1.8, 'min': 1800.0, 'max': 3600.0}, {'current': 1.875, 'min': 1800.0, 'max': 3600.0}, {'current': 1.8, 'min': 1800.0, 'max': 3600.0}, {'current': 1.8, 'min': 1800.0, 'max': 3600.0}, {'current': 1.8, 'min': 1800.0, 'max': 3600.0}, {'current': 1.916, 'min': 1800.0, 'max': 3600.0}, {'current': 2.394, 'min': 1800.0, 'max': 3600.0}, {'current': 1.92, 'min': 1800.0, 'max': 3600.0}, {'current': 1.8, 'min': 1800.0, 'max': 3600.0}, {'current': 1.8, 'min': 1800.0, 'max': 3600.0}, {'current': 1.8, 'min': 1800.0, 'max': 3600.0}, {'current': 1.8, 'min': 1800.0, 'max': 3600.0}, {'current': 2.397, 'min': 1800.0, 'max': 3600.0}, {'current': 1.8, 'min': 1800.0, 'max': 3600.0}, {'current': 1.8, 'min': 1800.0, 'max': 3600.0}, {'current': 1.8, 'min': 1800.0, 'max': 3600.0}, {'current': 3.6, 'min': 1800.0, 'max': 3600.0}, {'current': 3.6, 'min': 1800.0, 'max': 3600.0}, {'current': 1.8, 'min': 1800.0, 'max': 3600.0}, {'current': 1.8, 'min': 1800.0, 'max': 3600.0}, {'current': 1.797, 'min': 1800.0, 'max': 3600.0}, {'current': 4.303, 'min': 1800.0, 'max': 3600.0}, {'current': 3.6, 'min': 1800.0, 'max': 3600.0}, {'current': 1.8, 'min': 1800.0, 'max': 3600.0}, {'current': 1.8, 'min': 1800.0, 'max': 3600.0}, {'current': 1.8, 'min': 1800.0, 'max': 3600.0}, {'current': 3.6, 'min': 1800.0, 'max': 3600.0}, {'current': 2.001, 'min': 1800.0, 'max': 3600.0}, {'current': 2.418, 'min': 1800.0, 'max': 3600.0}, {'current': 1.8, 'min': 1800.0, 'max': 3600.0}, {'current': 3.6, 'min': 1800.0, 'max': 3600.0}, {'current': 1.8, 'min': 1800.0, 'max': 3600.0}, {'current': 1.8, 'min': 1800.0, 'max': 3600.0}, {'current': 1.8, 'min': 1800.0, 'max': 3600.0}, {'current': 1.916, 'min': 1800.0, 'max': 3600.0}, {'current': 1.8, 'min': 1800.0, 'max': 3600.0}, {'current': 1.917, 'min': 1800.0, 'max': 3600.0}, {'current': 1.8, 'min': 1800.0, 'max': 3600.0}, {'current': 3.6, 'min': 1800.0, 'max': 3600.0}, {'current': 1.8, 'min': 1800.0, 'max': 3600.0}, {'current': 1.8, 'min': 1800.0, 'max': 3600.0}, {'current': 1.8, 'min': 1800.0, 'max': 3600.0}, {'current': 1.8, 'min': 1800.0, 'max': 3600.0}, {'current': 1.8, 'min': 1800.0, 'max': 3600.0}, {'current': 3.6, 'min': 1800.0, 'max': 3600.0}, {'current': 1.8, 'min': 1800.0, 'max': 3600.0}, {'current': 3.6, 'min': 1800.0, 'max': 3600.0}, {'current': 1.8, 'min': 1800.0, 'max': 3600.0}, {'current': 1.8, 'min': 1800.0, 'max': 3600.0}, {'current': 1.8, 'min': 1800.0, 'max': 3600.0}, {'current': 1.8, 'min': 1800.0, 'max': 3600.0}, {'current': 1.8, 'min': 1800.0, 'max': 3600.0}, {'current': 1.8, 'min': 1800.0, 'max': 3600.0}, {'current': 1.8, 'min': 1800.0, 'max': 3600.0}, {'current': 1.8, 'min': 1800.0, 'max': 3600.0}, {'current': 1.8, 'min': 1800.0, 'max': 3600.0}, {'current': 3.637, 'min': 1800.0, 'max': 3600.0}, {'current': 2.278, 'min': 1800.0, 'max': 3600.0}, {'current': 1.801, 'min': 1800.0, 'max': 3600.0}, {'current': 2.835, 'min': 1800.0, 'max': 3600.0}, {'current': 1.8, 'min': 1800.0, 'max': 3600.0}, {'current': 1.8, 'min': 1800.0, 'max': 3600.0}, {'current': 1.8, 'min': 1800.0, 'max': 3600.0}, {'current': 1.8, 'min': 1800.0, 'max': 3600.0}], 'disk': {'total': 1876.1108436584473, 'used': 1598.221092224121}, 'gpu': 'NVIDIA RTX A6000', 'gpu_count': 6, 'gpu_devices': [{'name': 'NVIDIA RTX A6000', 'memory_total': 51527024640}, {'name': 'NVIDIA RTX A6000', 'memory_total': 51527024640}, {'name': 'NVIDIA RTX A6000', 'memory_total': 51527024640}, {'name': 'NVIDIA RTX A6000', 'memory_total': 51527024640}, {'name': 'NVIDIA RTX A6000', 'memory_total': 51527024640}, {'name': 'NVIDIA RTX A6000', 'memory_total': 51527024640}], 'memory': {'total': 503.5258560180664}}
+2024-02-04 19:38:00,292 INFO    HandlerThread:1956269 [system_monitor.py:probe():211] Finished collecting system info
+2024-02-04 19:38:00,292 INFO    HandlerThread:1956269 [system_monitor.py:probe():214] Publishing system info
+2024-02-04 19:38:00,292 DEBUG   HandlerThread:1956269 [system_info.py:_save_pip():51] Saving list of pip packages installed into the current environment
+2024-02-04 19:38:00,292 DEBUG   HandlerThread:1956269 [system_info.py:_save_pip():67] Saving pip packages done
+2024-02-04 19:38:00,293 INFO    HandlerThread:1956269 [system_monitor.py:probe():216] Finished publishing system info
+2024-02-04 19:38:00,298 DEBUG   SenderThread:1956269 [sender.py:send():375] send: files
+2024-02-04 19:38:00,298 INFO    SenderThread:1956269 [sender.py:_save_file():1378] saving file wandb-metadata.json with policy now
+2024-02-04 19:38:00,304 DEBUG   HandlerThread:1956269 [handler.py:handle_request():144] handle_request: stop_status
+2024-02-04 19:38:00,304 DEBUG   SenderThread:1956269 [sender.py:send_request():402] send_request: stop_status
+2024-02-04 19:38:00,493 DEBUG   SenderThread:1956269 [sender.py:send():375] send: telemetry
+2024-02-04 19:38:00,493 DEBUG   SenderThread:1956269 [sender.py:send():375] send: telemetry
+2024-02-04 19:38:00,493 DEBUG   SenderThread:1956269 [sender.py:send():375] send: run
+2024-02-04 19:38:00,650 INFO    wandb-upload_0:1956269 [upload_job.py:push():137] Uploaded file /tmp/tmplqzevtodwandb/64i31tas-wandb-metadata.json
+2024-02-04 19:38:00,660 INFO    SenderThread:1956269 [sender.py:send_run():1002] updated run: fwz4gkj7
+2024-02-04 19:38:00,660 DEBUG   SenderThread:1956269 [sender.py:send():375] send: telemetry
+2024-02-04 19:38:00,661 DEBUG   SenderThread:1956269 [sender.py:send():375] send: config
+2024-02-04 19:38:00,661 DEBUG   SenderThread:1956269 [sender.py:send():375] send: exit
+2024-02-04 19:38:00,661 INFO    SenderThread:1956269 [sender.py:send_exit():598] handling exit code: 1
+2024-02-04 19:38:00,662 INFO    SenderThread:1956269 [sender.py:send_exit():600] handling runtime: 0
+2024-02-04 19:38:00,662 INFO    SenderThread:1956269 [sender.py:_save_file():1378] saving file wandb-summary.json with policy end
+2024-02-04 19:38:00,662 INFO    SenderThread:1956269 [sender.py:send_exit():606] send defer
+2024-02-04 19:38:00,662 DEBUG   HandlerThread:1956269 [handler.py:handle_request():144] handle_request: defer
+2024-02-04 19:38:00,662 INFO    HandlerThread:1956269 [handler.py:handle_request_defer():170] handle defer: 0
+2024-02-04 19:38:00,663 DEBUG   SenderThread:1956269 [sender.py:send_request():402] send_request: defer
+2024-02-04 19:38:00,663 INFO    SenderThread:1956269 [sender.py:send_request_defer():622] handle sender defer: 0
+2024-02-04 19:38:00,663 INFO    SenderThread:1956269 [sender.py:transition_state():626] send defer: 1
+2024-02-04 19:38:00,663 DEBUG   HandlerThread:1956269 [handler.py:handle_request():144] handle_request: defer
+2024-02-04 19:38:00,663 INFO    HandlerThread:1956269 [handler.py:handle_request_defer():170] handle defer: 1
+2024-02-04 19:38:00,663 DEBUG   SenderThread:1956269 [sender.py:send_request():402] send_request: defer
+2024-02-04 19:38:00,663 INFO    SenderThread:1956269 [sender.py:send_request_defer():622] handle sender defer: 1
+2024-02-04 19:38:00,663 INFO    SenderThread:1956269 [sender.py:transition_state():626] send defer: 2
+2024-02-04 19:38:00,663 DEBUG   HandlerThread:1956269 [handler.py:handle_request():144] handle_request: defer
+2024-02-04 19:38:00,663 INFO    HandlerThread:1956269 [handler.py:handle_request_defer():170] handle defer: 2
+2024-02-04 19:38:00,664 INFO    HandlerThread:1956269 [system_monitor.py:finish():190] Stopping system monitor
+2024-02-04 19:38:00,664 DEBUG   SystemMonitor:1956269 [system_monitor.py:_start():159] Starting system metrics aggregation loop
+2024-02-04 19:38:00,664 DEBUG   SystemMonitor:1956269 [system_monitor.py:_start():166] Finished system metrics aggregation loop
+2024-02-04 19:38:00,664 DEBUG   SystemMonitor:1956269 [system_monitor.py:_start():170] Publishing last batch of metrics
+2024-02-04 19:38:00,664 INFO    HandlerThread:1956269 [interfaces.py:finish():202] Joined cpu monitor
+2024-02-04 19:38:00,664 INFO    HandlerThread:1956269 [interfaces.py:finish():202] Joined disk monitor
+2024-02-04 19:38:00,931 INFO    HandlerThread:1956269 [interfaces.py:finish():202] Joined gpu monitor
+2024-02-04 19:38:00,932 INFO    HandlerThread:1956269 [interfaces.py:finish():202] Joined memory monitor
+2024-02-04 19:38:00,932 INFO    HandlerThread:1956269 [interfaces.py:finish():202] Joined network monitor
+2024-02-04 19:38:00,932 DEBUG   SenderThread:1956269 [sender.py:send_request():402] send_request: defer
+2024-02-04 19:38:00,932 INFO    SenderThread:1956269 [sender.py:send_request_defer():622] handle sender defer: 2
+2024-02-04 19:38:00,932 INFO    SenderThread:1956269 [sender.py:transition_state():626] send defer: 3
+2024-02-04 19:38:00,933 DEBUG   HandlerThread:1956269 [handler.py:handle_request():144] handle_request: defer
+2024-02-04 19:38:00,933 INFO    HandlerThread:1956269 [handler.py:handle_request_defer():170] handle defer: 3
+2024-02-04 19:38:00,933 DEBUG   SenderThread:1956269 [sender.py:send_request():402] send_request: defer
+2024-02-04 19:38:00,933 INFO    SenderThread:1956269 [sender.py:send_request_defer():622] handle sender defer: 3
+2024-02-04 19:38:00,933 INFO    SenderThread:1956269 [sender.py:transition_state():626] send defer: 4
+2024-02-04 19:38:00,933 DEBUG   HandlerThread:1956269 [handler.py:handle_request():144] handle_request: defer
+2024-02-04 19:38:00,933 INFO    HandlerThread:1956269 [handler.py:handle_request_defer():170] handle defer: 4
+2024-02-04 19:38:00,934 DEBUG   SenderThread:1956269 [sender.py:send_request():402] send_request: defer
+2024-02-04 19:38:00,934 INFO    SenderThread:1956269 [sender.py:send_request_defer():622] handle sender defer: 4
+2024-02-04 19:38:00,934 INFO    SenderThread:1956269 [sender.py:transition_state():626] send defer: 5
+2024-02-04 19:38:00,934 DEBUG   HandlerThread:1956269 [handler.py:handle_request():144] handle_request: defer
+2024-02-04 19:38:00,934 INFO    HandlerThread:1956269 [handler.py:handle_request_defer():170] handle defer: 5
+2024-02-04 19:38:00,934 DEBUG   SenderThread:1956269 [sender.py:send():375] send: summary
+2024-02-04 19:38:00,935 INFO    SenderThread:1956269 [sender.py:_save_file():1378] saving file wandb-summary.json with policy end
+2024-02-04 19:38:00,935 DEBUG   SenderThread:1956269 [sender.py:send_request():402] send_request: defer
+2024-02-04 19:38:00,935 INFO    SenderThread:1956269 [sender.py:send_request_defer():622] handle sender defer: 5
+2024-02-04 19:38:00,935 INFO    SenderThread:1956269 [sender.py:transition_state():626] send defer: 6
+2024-02-04 19:38:00,935 DEBUG   HandlerThread:1956269 [handler.py:handle_request():144] handle_request: defer
+2024-02-04 19:38:00,935 INFO    HandlerThread:1956269 [handler.py:handle_request_defer():170] handle defer: 6
+2024-02-04 19:38:00,936 DEBUG   SenderThread:1956269 [sender.py:send_request():402] send_request: defer
+2024-02-04 19:38:00,936 INFO    SenderThread:1956269 [sender.py:send_request_defer():622] handle sender defer: 6
+2024-02-04 19:38:00,941 DEBUG   HandlerThread:1956269 [handler.py:handle_request():144] handle_request: status_report
+2024-02-04 19:38:01,038 INFO    SenderThread:1956269 [sender.py:transition_state():626] send defer: 7
+2024-02-04 19:38:01,038 DEBUG   HandlerThread:1956269 [handler.py:handle_request():144] handle_request: defer
+2024-02-04 19:38:01,038 INFO    HandlerThread:1956269 [handler.py:handle_request_defer():170] handle defer: 7
+2024-02-04 19:38:01,039 DEBUG   SenderThread:1956269 [sender.py:send_request():402] send_request: defer
+2024-02-04 19:38:01,039 INFO    SenderThread:1956269 [sender.py:send_request_defer():622] handle sender defer: 7
+2024-02-04 19:38:01,146 INFO    Thread-12 :1956269 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/bizon/temp-cot/transformers-learning-dynamics/nanoGPT_extension/wandb/run-20240204_193759-fwz4gkj7/files/config.yaml
+2024-02-04 19:38:01,146 INFO    Thread-12 :1956269 [dir_watcher.py:_on_file_created():278] file/dir created: /home/bizon/temp-cot/transformers-learning-dynamics/nanoGPT_extension/wandb/run-20240204_193759-fwz4gkj7/files/wandb-summary.json
+2024-02-04 19:38:01,146 INFO    Thread-12 :1956269 [dir_watcher.py:_on_file_created():278] file/dir created: /home/bizon/temp-cot/transformers-learning-dynamics/nanoGPT_extension/wandb/run-20240204_193759-fwz4gkj7/files/requirements.txt
+2024-02-04 19:38:01,146 INFO    Thread-12 :1956269 [dir_watcher.py:_on_file_created():278] file/dir created: /home/bizon/temp-cot/transformers-learning-dynamics/nanoGPT_extension/wandb/run-20240204_193759-fwz4gkj7/files/wandb-metadata.json
+2024-02-04 19:38:01,146 INFO    Thread-12 :1956269 [dir_watcher.py:_on_file_created():278] file/dir created: /home/bizon/temp-cot/transformers-learning-dynamics/nanoGPT_extension/wandb/run-20240204_193759-fwz4gkj7/files/output.log
+2024-02-04 19:38:01,626 DEBUG   HandlerThread:1956269 [handler.py:handle_request():144] handle_request: poll_exit
+2024-02-04 19:38:02,671 INFO    SenderThread:1956269 [sender.py:transition_state():626] send defer: 8
+2024-02-04 19:38:02,671 DEBUG   SenderThread:1956269 [sender.py:send_request():402] send_request: poll_exit
+2024-02-04 19:38:02,671 DEBUG   HandlerThread:1956269 [handler.py:handle_request():144] handle_request: defer
+2024-02-04 19:38:02,672 INFO    HandlerThread:1956269 [handler.py:handle_request_defer():170] handle defer: 8
+2024-02-04 19:38:02,672 DEBUG   SenderThread:1956269 [sender.py:send_request():402] send_request: defer
+2024-02-04 19:38:02,672 INFO    SenderThread:1956269 [sender.py:send_request_defer():622] handle sender defer: 8
+2024-02-04 19:38:02,672 INFO    SenderThread:1956269 [sender.py:transition_state():626] send defer: 9
+2024-02-04 19:38:02,673 DEBUG   HandlerThread:1956269 [handler.py:handle_request():144] handle_request: defer
+2024-02-04 19:38:02,673 INFO    HandlerThread:1956269 [handler.py:handle_request_defer():170] handle defer: 9
+2024-02-04 19:38:02,673 DEBUG   SenderThread:1956269 [sender.py:send_request():402] send_request: defer
+2024-02-04 19:38:02,673 INFO    SenderThread:1956269 [sender.py:send_request_defer():622] handle sender defer: 9
+2024-02-04 19:38:02,673 INFO    SenderThread:1956269 [dir_watcher.py:finish():365] shutting down directory watcher
+2024-02-04 19:38:03,146 INFO    Thread-12 :1956269 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/bizon/temp-cot/transformers-learning-dynamics/nanoGPT_extension/wandb/run-20240204_193759-fwz4gkj7/files/output.log
+2024-02-04 19:38:03,146 INFO    SenderThread:1956269 [dir_watcher.py:finish():395] scan: /home/bizon/temp-cot/transformers-learning-dynamics/nanoGPT_extension/wandb/run-20240204_193759-fwz4gkj7/files
+2024-02-04 19:38:03,147 INFO    SenderThread:1956269 [dir_watcher.py:finish():409] scan save: /home/bizon/temp-cot/transformers-learning-dynamics/nanoGPT_extension/wandb/run-20240204_193759-fwz4gkj7/files/wandb-summary.json wandb-summary.json
+2024-02-04 19:38:03,147 INFO    SenderThread:1956269 [dir_watcher.py:finish():409] scan save: /home/bizon/temp-cot/transformers-learning-dynamics/nanoGPT_extension/wandb/run-20240204_193759-fwz4gkj7/files/output.log output.log
+2024-02-04 19:38:03,147 INFO    SenderThread:1956269 [dir_watcher.py:finish():409] scan save: /home/bizon/temp-cot/transformers-learning-dynamics/nanoGPT_extension/wandb/run-20240204_193759-fwz4gkj7/files/wandb-metadata.json wandb-metadata.json
+2024-02-04 19:38:03,147 INFO    SenderThread:1956269 [dir_watcher.py:finish():409] scan save: /home/bizon/temp-cot/transformers-learning-dynamics/nanoGPT_extension/wandb/run-20240204_193759-fwz4gkj7/files/config.yaml config.yaml
+2024-02-04 19:38:03,147 INFO    SenderThread:1956269 [dir_watcher.py:finish():409] scan save: /home/bizon/temp-cot/transformers-learning-dynamics/nanoGPT_extension/wandb/run-20240204_193759-fwz4gkj7/files/requirements.txt requirements.txt
+2024-02-04 19:38:03,147 INFO    SenderThread:1956269 [sender.py:transition_state():626] send defer: 10
+2024-02-04 19:38:03,147 DEBUG   HandlerThread:1956269 [handler.py:handle_request():144] handle_request: defer
+2024-02-04 19:38:03,148 INFO    HandlerThread:1956269 [handler.py:handle_request_defer():170] handle defer: 10
+2024-02-04 19:38:03,151 DEBUG   SenderThread:1956269 [sender.py:send_request():402] send_request: defer
+2024-02-04 19:38:03,151 INFO    SenderThread:1956269 [sender.py:send_request_defer():622] handle sender defer: 10
+2024-02-04 19:38:03,151 INFO    SenderThread:1956269 [file_pusher.py:finish():167] shutting down file pusher
+2024-02-04 19:38:03,358 INFO    wandb-upload_1:1956269 [upload_job.py:push():137] Uploaded file /home/bizon/temp-cot/transformers-learning-dynamics/nanoGPT_extension/wandb/run-20240204_193759-fwz4gkj7/files/wandb-summary.json
+2024-02-04 19:38:03,522 INFO    wandb-upload_3:1956269 [upload_job.py:push():137] Uploaded file /home/bizon/temp-cot/transformers-learning-dynamics/nanoGPT_extension/wandb/run-20240204_193759-fwz4gkj7/files/requirements.txt
+2024-02-04 19:38:03,541 INFO    wandb-upload_0:1956269 [upload_job.py:push():137] Uploaded file /home/bizon/temp-cot/transformers-learning-dynamics/nanoGPT_extension/wandb/run-20240204_193759-fwz4gkj7/files/output.log
+2024-02-04 19:38:03,542 INFO    wandb-upload_2:1956269 [upload_job.py:push():137] Uploaded file /home/bizon/temp-cot/transformers-learning-dynamics/nanoGPT_extension/wandb/run-20240204_193759-fwz4gkj7/files/config.yaml
+2024-02-04 19:38:03,743 INFO    Thread-11 (_thread_body):1956269 [sender.py:transition_state():626] send defer: 11
+2024-02-04 19:38:03,743 DEBUG   HandlerThread:1956269 [handler.py:handle_request():144] handle_request: defer
+2024-02-04 19:38:03,743 INFO    HandlerThread:1956269 [handler.py:handle_request_defer():170] handle defer: 11
+2024-02-04 19:38:03,744 DEBUG   SenderThread:1956269 [sender.py:send_request():402] send_request: defer
+2024-02-04 19:38:03,744 INFO    SenderThread:1956269 [sender.py:send_request_defer():622] handle sender defer: 11
+2024-02-04 19:38:03,744 INFO    SenderThread:1956269 [file_pusher.py:join():172] waiting for file pusher
+2024-02-04 19:38:03,744 INFO    SenderThread:1956269 [sender.py:transition_state():626] send defer: 12
+2024-02-04 19:38:03,744 DEBUG   HandlerThread:1956269 [handler.py:handle_request():144] handle_request: defer
+2024-02-04 19:38:03,744 INFO    HandlerThread:1956269 [handler.py:handle_request_defer():170] handle defer: 12
+2024-02-04 19:38:03,745 DEBUG   SenderThread:1956269 [sender.py:send_request():402] send_request: defer
+2024-02-04 19:38:03,745 INFO    SenderThread:1956269 [sender.py:send_request_defer():622] handle sender defer: 12
+2024-02-04 19:38:03,947 INFO    SenderThread:1956269 [sender.py:transition_state():626] send defer: 13
+2024-02-04 19:38:03,947 DEBUG   HandlerThread:1956269 [handler.py:handle_request():144] handle_request: defer
+2024-02-04 19:38:03,947 INFO    HandlerThread:1956269 [handler.py:handle_request_defer():170] handle defer: 13
+2024-02-04 19:38:03,948 DEBUG   SenderThread:1956269 [sender.py:send_request():402] send_request: defer
+2024-02-04 19:38:03,948 INFO    SenderThread:1956269 [sender.py:send_request_defer():622] handle sender defer: 13
+2024-02-04 19:38:03,948 INFO    SenderThread:1956269 [sender.py:transition_state():626] send defer: 14
+2024-02-04 19:38:03,948 DEBUG   HandlerThread:1956269 [handler.py:handle_request():144] handle_request: defer
+2024-02-04 19:38:03,948 INFO    HandlerThread:1956269 [handler.py:handle_request_defer():170] handle defer: 14
+2024-02-04 19:38:03,948 DEBUG   SenderThread:1956269 [sender.py:send():375] send: final
+2024-02-04 19:38:03,948 DEBUG   SenderThread:1956269 [sender.py:send():375] send: footer
+2024-02-04 19:38:03,949 DEBUG   SenderThread:1956269 [sender.py:send_request():402] send_request: defer
+2024-02-04 19:38:03,949 INFO    SenderThread:1956269 [sender.py:send_request_defer():622] handle sender defer: 14
+2024-02-04 19:38:03,949 DEBUG   HandlerThread:1956269 [handler.py:handle_request():144] handle_request: poll_exit
+2024-02-04 19:38:03,949 DEBUG   SenderThread:1956269 [sender.py:send_request():402] send_request: poll_exit
+2024-02-04 19:38:03,949 DEBUG   HandlerThread:1956269 [handler.py:handle_request():144] handle_request: server_info
+2024-02-04 19:38:03,950 DEBUG   SenderThread:1956269 [sender.py:send_request():402] send_request: server_info
+2024-02-04 19:38:03,951 DEBUG   HandlerThread:1956269 [handler.py:handle_request():144] handle_request: get_summary
+2024-02-04 19:38:03,951 DEBUG   HandlerThread:1956269 [handler.py:handle_request():144] handle_request: sampled_history
+2024-02-04 19:38:04,067 INFO    MainThread:1956269 [wandb_run.py:_footer_history_summary_info():3469] rendering history
+2024-02-04 19:38:04,067 INFO    MainThread:1956269 [wandb_run.py:_footer_history_summary_info():3501] rendering summary
+2024-02-04 19:38:04,067 INFO    MainThread:1956269 [wandb_run.py:_footer_sync_info():3428] logging synced files
+2024-02-04 19:38:04,068 DEBUG   HandlerThread:1956269 [handler.py:handle_request():144] handle_request: shutdown
+2024-02-04 19:38:04,068 INFO    HandlerThread:1956269 [handler.py:finish():842] shutting down handler
+2024-02-04 19:38:04,950 INFO    WriterThread:1956269 [datastore.py:close():298] close: /home/bizon/temp-cot/transformers-learning-dynamics/nanoGPT_extension/wandb/run-20240204_193759-fwz4gkj7/run-fwz4gkj7.wandb
+2024-02-04 19:38:05,067 INFO    SenderThread:1956269 [sender.py:finish():1550] shutting down sender
+2024-02-04 19:38:05,067 INFO    SenderThread:1956269 [file_pusher.py:finish():167] shutting down file pusher
+2024-02-04 19:38:05,067 INFO    SenderThread:1956269 [file_pusher.py:join():172] waiting for file pusher

@@ -1,0 +1,15 @@
+{'deploy': True, 'tag': 'scratch', 'seed': 0, 'out_dir': 'out_qklayernorm', 'eval_interval': 1000, 'log_interval': 100, 'save_ckpt_interval': 1, 'eval_iters': 200, 'eval_only': False, 'always_save_checkpoint': True, 'init_from': 'scratch', 'wandb_project': 'qklayernorm', 'wandb_run_name': 'gpt', 'data_dir_train': '/home/bizon/temp-cot/nanoGT_extension/transformers-learning/tokenized_train_data.npy', 'data_dir_eval': '/home/bizon/temp-cot/nanoGT_extension/transformers-learning/tokenized_eval_data.npy', 'gradient_accumulation_steps': 1, 'batch_size': 256, 'block_size': 512, 'n_layer': 12, 'n_head': 12, 'n_embd': 768, 'dropout': 0.0, 'bias': False, 'QKlayernorm': True, 'learning_rate': 0.0006, 'max_iters': 40000, 'optimizer': 'AdamW', 'weight_decay': 0.1, 'beta1': 0.9, 'beta2': 0.95, 'grad_clip': 1.0, 'decay_lr': True, 'warmup_iters': 20, 'lr_decay_iters': 600000, 'min_lr': 0.0006, 'backend': 'nccl', 'device': 'cuda', 'compile': True, 'top_k': 10, 'temperature': 1, 'num_samples_generated_for_accuracy': 1}
+tokens per iteration will be: 131,072
+Error executing job with overrides: []
+Traceback (most recent call last):
+  File "/home/bizon/temp-cot/transformers-learning-dynamics/nanoGPT_extension/train_ntt_qklayernorm_ddp.py", line 94, in main
+    train_dataloader, val_dataloader = get_dataloader(
+  File "/home/bizon/temp-cot/transformers-learning-dynamics/nanoGPT_extension/utils.py", line 137, in get_dataloader
+    train_dataset = SequenceDataset(train_data_path, block_size, add_one_token)
+  File "/home/bizon/temp-cot/transformers-learning-dynamics/nanoGPT_extension/utils.py", line 85, in __init__
+    self.data = np.load(filepath, allow_pickle=True)
+  File "/home/bizon/.local/lib/python3.10/site-packages/numpy/lib/npyio.py", line 427, in load
+    fid = stack.enter_context(open(os_fspath(file), "rb"))
+FileNotFoundError: [Errno 2] No such file or directory: '/home/bizon/temp-cot/nanoGT_extension/transformers-learning/tokenized_train_data.npy'
+
+Set the environment variable HYDRA_FULL_ERROR=1 for a complete stack trace.

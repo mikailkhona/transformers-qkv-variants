@@ -1,0 +1,161 @@
+wandb_version: 1
+
+_wandb:
+  desc: null
+  value:
+    python_version: 3.10.6
+    cli_version: 0.15.3
+    framework: huggingface
+    huggingface_version: 4.38.0.dev0
+    is_jupyter_run: false
+    is_kaggle_kernel: false
+    start_time: 1707093109.707335
+    t:
+      1:
+      - 1
+      - 11
+      - 49
+      - 50
+      - 51
+      - 55
+      2:
+      - 1
+      - 11
+      - 49
+      - 50
+      - 51
+      - 55
+      3:
+      - 17
+      - 23
+      - 37
+      4: 3.10.6
+      5: 0.15.3
+      6: 4.38.0.dev0
+      8:
+      - 5
+      10:
+      - 3
+deploy:
+  desc: null
+  value: true
+tag:
+  desc: null
+  value: scratch
+seed:
+  desc: null
+  value: 0
+out_dir:
+  desc: null
+  value: out_qklayernorm
+eval_interval:
+  desc: null
+  value: 1000
+log_interval:
+  desc: null
+  value: 100
+save_ckpt_interval:
+  desc: null
+  value: 1
+eval_iters:
+  desc: null
+  value: 200
+eval_only:
+  desc: null
+  value: false
+always_save_checkpoint:
+  desc: null
+  value: true
+init_from:
+  desc: null
+  value: scratch
+wandb_project:
+  desc: null
+  value: qklayernorm
+wandb_run_name:
+  desc: null
+  value: gpt
+data_dir_train:
+  desc: null
+  value: /home/bizon/temp-cot/transformers-learning/tokenized_train_data.npy
+data_dir_eval:
+  desc: null
+  value: /home/bizon/temp-cot/transformers-learning/tokenized_eval_data.npy
+gradient_accumulation_steps:
+  desc: null
+  value: 1
+batch_size:
+  desc: null
+  value: 256
+block_size:
+  desc: null
+  value: 512
+n_layer:
+  desc: null
+  value: 12
+n_head:
+  desc: null
+  value: 12
+n_embd:
+  desc: null
+  value: 768
+dropout:
+  desc: null
+  value: 0.0
+bias:
+  desc: null
+  value: false
+QKlayernorm:
+  desc: null
+  value: true
+learning_rate:
+  desc: null
+  value: 0.0006
+max_iters:
+  desc: null
+  value: 40000
+optimizer:
+  desc: null
+  value: AdamW
+weight_decay:
+  desc: null
+  value: 0.1
+beta1:
+  desc: null
+  value: 0.9
+beta2:
+  desc: null
+  value: 0.95
+grad_clip:
+  desc: null
+  value: 1.0
+decay_lr:
+  desc: null
+  value: true
+warmup_iters:
+  desc: null
+  value: 20
+lr_decay_iters:
+  desc: null
+  value: 600000
+min_lr:
+  desc: null
+  value: 0.0006
+backend:
+  desc: null
+  value: nccl
+device:
+  desc: null
+  value: cuda
+compile:
+  desc: null
+  value: true
+top_k:
+  desc: null
+  value: 10
+temperature:
+  desc: null
+  value: 1
+num_samples_generated_for_accuracy:
+  desc: null
+  value: 1

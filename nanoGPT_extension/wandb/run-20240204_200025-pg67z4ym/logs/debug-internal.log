@@ -1,0 +1,163 @@
+2024-02-04 20:00:25,101 INFO    StreamThr :1959018 [internal.py:wandb_internal():86] W&B internal server running at pid: 1959018, started at: 2024-02-04 20:00:25.101331
+2024-02-04 20:00:25,103 DEBUG   HandlerThread:1959018 [handler.py:handle_request():144] handle_request: status
+2024-02-04 20:00:25,104 INFO    WriterThread:1959018 [datastore.py:open_for_write():85] open: /home/bizon/temp-cot/transformers-learning-dynamics/nanoGPT_extension/wandb/run-20240204_200025-pg67z4ym/run-pg67z4ym.wandb
+2024-02-04 20:00:25,105 DEBUG   SenderThread:1959018 [sender.py:send():375] send: header
+2024-02-04 20:00:25,105 DEBUG   SenderThread:1959018 [sender.py:send():375] send: run
+2024-02-04 20:00:25,299 INFO    SenderThread:1959018 [dir_watcher.py:__init__():219] watching files in: /home/bizon/temp-cot/transformers-learning-dynamics/nanoGPT_extension/wandb/run-20240204_200025-pg67z4ym/files
+2024-02-04 20:00:25,299 INFO    SenderThread:1959018 [sender.py:_start_run_threads():1124] run started: pg67z4ym with start time 1707094825.100681
+2024-02-04 20:00:25,299 DEBUG   SenderThread:1959018 [sender.py:send_request():402] send_request: summary_record
+2024-02-04 20:00:25,299 INFO    SenderThread:1959018 [sender.py:_save_file():1378] saving file wandb-summary.json with policy end
+2024-02-04 20:00:25,300 DEBUG   HandlerThread:1959018 [handler.py:handle_request():144] handle_request: check_version
+2024-02-04 20:00:25,301 DEBUG   SenderThread:1959018 [sender.py:send_request():402] send_request: check_version
+2024-02-04 20:00:25,460 DEBUG   HandlerThread:1959018 [handler.py:handle_request():144] handle_request: run_start
+2024-02-04 20:00:25,466 DEBUG   HandlerThread:1959018 [system_info.py:__init__():31] System info init
+2024-02-04 20:00:25,466 DEBUG   HandlerThread:1959018 [system_info.py:__init__():46] System info init done
+2024-02-04 20:00:25,466 INFO    HandlerThread:1959018 [system_monitor.py:start():181] Starting system monitor
+2024-02-04 20:00:25,466 INFO    SystemMonitor:1959018 [system_monitor.py:_start():145] Starting system asset monitoring threads
+2024-02-04 20:00:25,467 INFO    HandlerThread:1959018 [system_monitor.py:probe():201] Collecting system info
+2024-02-04 20:00:25,467 INFO    SystemMonitor:1959018 [interfaces.py:start():190] Started cpu monitoring
+2024-02-04 20:00:25,468 INFO    SystemMonitor:1959018 [interfaces.py:start():190] Started disk monitoring
+2024-02-04 20:00:25,468 INFO    SystemMonitor:1959018 [interfaces.py:start():190] Started gpu monitoring
+2024-02-04 20:00:25,469 INFO    SystemMonitor:1959018 [interfaces.py:start():190] Started memory monitoring
+2024-02-04 20:00:25,469 INFO    SystemMonitor:1959018 [interfaces.py:start():190] Started network monitoring
+2024-02-04 20:00:25,505 DEBUG   HandlerThread:1959018 [system_info.py:probe():195] Probing system
+2024-02-04 20:00:25,507 DEBUG   HandlerThread:1959018 [system_info.py:_probe_git():180] Probing git
+2024-02-04 20:00:25,510 ERROR   HandlerThread:1959018 [git.py:root():69] git root error: Cmd('git') failed due to: exit code(128)
+  cmdline: git rev-parse --show-toplevel
+  stderr: 'fatal: not a git repository: /home/bizon/temp-cot/transformers-learning-dynamics/nanoGPT_extension/../.git/modules/nanoGPT_extension'
+2024-02-04 20:00:25,510 DEBUG   HandlerThread:1959018 [system_info.py:_probe_git():188] Probing git done
+2024-02-04 20:00:25,510 DEBUG   HandlerThread:1959018 [system_info.py:probe():240] Probing system done
+2024-02-04 20:00:25,510 DEBUG   HandlerThread:1959018 [system_monitor.py:probe():210] {'os': 'Linux-5.19.0-46-generic-x86_64-with-glibc2.35', 'python': '3.10.6', 'heartbeatAt': '2024-02-05T01:00:25.506012', 'startedAt': '2024-02-05T01:00:25.098145', 'docker': None, 'cuda': None, 'args': (), 'state': 'running', 'program': '/home/bizon/temp-cot/transformers-learning-dynamics/nanoGPT_extension/train_ntt_qklayernorm_ddp.py', 'codePath': 'train_ntt_qklayernorm_ddp.py', 'git': {'remote': None, 'commit': None}, 'email': 'mikailkhona@gmail.com', 'root': '/home/bizon/temp-cot/transformers-learning-dynamics/nanoGPT_extension', 'host': 'dl', 'username': 'bizon', 'executable': '/usr/bin/python3', 'cpu_count': 32, 'cpu_count_logical': 64, 'cpu_freq': {'current': 2.3037031249999993, 'min': 1800.0, 'max': 3600.0}, 'cpu_freq_per_core': [{'current': 1.8, 'min': 1800.0, 'max': 3600.0}, {'current': 1.8, 'min': 1800.0, 'max': 3600.0}, {'current': 1.8, 'min': 1800.0, 'max': 3600.0}, {'current': 3.6, 'min': 1800.0, 'max': 3600.0}, {'current': 1.8, 'min': 1800.0, 'max': 3600.0}, {'current': 3.6, 'min': 1800.0, 'max': 3600.0}, {'current': 1.8, 'min': 1800.0, 'max': 3600.0}, {'current': 1.802, 'min': 1800.0, 'max': 3600.0}, {'current': 1.8, 'min': 1800.0, 'max': 3600.0}, {'current': 1.8, 'min': 1800.0, 'max': 3600.0}, {'current': 1.8, 'min': 1800.0, 'max': 3600.0}, {'current': 1.8, 'min': 1800.0, 'max': 3600.0}, {'current': 1.8, 'min': 1800.0, 'max': 3600.0}, {'current': 3.6, 'min': 1800.0, 'max': 3600.0}, {'current': 1.8, 'min': 1800.0, 'max': 3600.0}, {'current': 1.8, 'min': 1800.0, 'max': 3600.0}, {'current': 1.917, 'min': 1800.0, 'max': 3600.0}, {'current': 1.798, 'min': 1800.0, 'max': 3600.0}, {'current': 2.7, 'min': 1800.0, 'max': 3600.0}, {'current': 1.8, 'min': 1800.0, 'max': 3600.0}, {'current': 1.8, 'min': 1800.0, 'max': 3600.0}, {'current': 3.6, 'min': 1800.0, 'max': 3600.0}, {'current': 3.6, 'min': 1800.0, 'max': 3600.0}, {'current': 1.8, 'min': 1800.0, 'max': 3600.0}, {'current': 1.8, 'min': 1800.0, 'max': 3600.0}, {'current': 1.8, 'min': 1800.0, 'max': 3600.0}, {'current': 2.314, 'min': 1800.0, 'max': 3600.0}, {'current': 1.8, 'min': 1800.0, 'max': 3600.0}, {'current': 1.8, 'min': 1800.0, 'max': 3600.0}, {'current': 1.8, 'min': 1800.0, 'max': 3600.0}, {'current': 1.8, 'min': 1800.0, 'max': 3600.0}, {'current': 1.799, 'min': 1800.0, 'max': 3600.0}, {'current': 1.8, 'min': 1800.0, 'max': 3600.0}, {'current': 1.8, 'min': 1800.0, 'max': 3600.0}, {'current': 1.8, 'min': 1800.0, 'max': 3600.0}, {'current': 1.8, 'min': 1800.0, 'max': 3600.0}, {'current': 1.8, 'min': 1800.0, 'max': 3600.0}, {'current': 1.8, 'min': 1800.0, 'max': 3600.0}, {'current': 3.6, 'min': 1800.0, 'max': 3600.0}, {'current': 3.6, 'min': 1800.0, 'max': 3600.0}, {'current': 1.8, 'min': 1800.0, 'max': 3600.0}, {'current': 3.6, 'min': 1800.0, 'max': 3600.0}, {'current': 1.8, 'min': 1800.0, 'max': 3600.0}, {'current': 2.4, 'min': 1800.0, 'max': 3600.0}, {'current': 1.952, 'min': 1800.0, 'max': 3600.0}, {'current': 1.8, 'min': 1800.0, 'max': 3600.0}, {'current': 1.8, 'min': 1800.0, 'max': 3600.0}, {'current': 1.8, 'min': 1800.0, 'max': 3600.0}, {'current': 2.7, 'min': 1800.0, 'max': 3600.0}, {'current': 1.8, 'min': 1800.0, 'max': 3600.0}, {'current': 3.6, 'min': 1800.0, 'max': 3600.0}, {'current': 1.8, 'min': 1800.0, 'max': 3600.0}, {'current': 1.8, 'min': 1800.0, 'max': 3600.0}, {'current': 1.8, 'min': 1800.0, 'max': 3600.0}, {'current': 2.168, 'min': 1800.0, 'max': 3600.0}, {'current': 1.916, 'min': 1800.0, 'max': 3600.0}, {'current': 1.8, 'min': 1800.0, 'max': 3600.0}, {'current': 1.8, 'min': 1800.0, 'max': 3600.0}, {'current': 3.6, 'min': 1800.0, 'max': 3600.0}, {'current': 1.8, 'min': 1800.0, 'max': 3600.0}, {'current': 2.106, 'min': 1800.0, 'max': 3600.0}, {'current': 1.918, 'min': 1800.0, 'max': 3600.0}, {'current': 1.8, 'min': 1800.0, 'max': 3600.0}, {'current': 1.8, 'min': 1800.0, 'max': 3600.0}], 'disk': {'total': 1876.1108436584473, 'used': 1598.2216796875}, 'gpu': 'NVIDIA RTX A6000', 'gpu_count': 6, 'gpu_devices': [{'name': 'NVIDIA RTX A6000', 'memory_total': 51527024640}, {'name': 'NVIDIA RTX A6000', 'memory_total': 51527024640}, {'name': 'NVIDIA RTX A6000', 'memory_total': 51527024640}, {'name': 'NVIDIA RTX A6000', 'memory_total': 51527024640}, {'name': 'NVIDIA RTX A6000', 'memory_total': 51527024640}, {'name': 'NVIDIA RTX A6000', 'memory_total': 51527024640}], 'memory': {'total': 503.5258560180664}}
+2024-02-04 20:00:25,510 INFO    HandlerThread:1959018 [system_monitor.py:probe():211] Finished collecting system info
+2024-02-04 20:00:25,510 INFO    HandlerThread:1959018 [system_monitor.py:probe():214] Publishing system info
+2024-02-04 20:00:25,510 DEBUG   HandlerThread:1959018 [system_info.py:_save_pip():51] Saving list of pip packages installed into the current environment
+2024-02-04 20:00:25,511 DEBUG   HandlerThread:1959018 [system_info.py:_save_pip():67] Saving pip packages done
+2024-02-04 20:00:25,511 INFO    HandlerThread:1959018 [system_monitor.py:probe():216] Finished publishing system info
+2024-02-04 20:00:25,517 DEBUG   SenderThread:1959018 [sender.py:send():375] send: files
+2024-02-04 20:00:25,517 INFO    SenderThread:1959018 [sender.py:_save_file():1378] saving file wandb-metadata.json with policy now
+2024-02-04 20:00:25,522 DEBUG   HandlerThread:1959018 [handler.py:handle_request():144] handle_request: stop_status
+2024-02-04 20:00:25,523 DEBUG   SenderThread:1959018 [sender.py:send_request():402] send_request: stop_status
+2024-02-04 20:00:25,740 DEBUG   SenderThread:1959018 [sender.py:send():375] send: telemetry
+2024-02-04 20:00:25,740 DEBUG   SenderThread:1959018 [sender.py:send():375] send: telemetry
+2024-02-04 20:00:25,740 DEBUG   SenderThread:1959018 [sender.py:send():375] send: run
+2024-02-04 20:00:25,794 INFO    wandb-upload_0:1959018 [upload_job.py:push():137] Uploaded file /tmp/tmp1xgq485uwandb/wxld1jap-wandb-metadata.json
+2024-02-04 20:00:25,826 INFO    SenderThread:1959018 [sender.py:send_run():1002] updated run: pg67z4ym
+2024-02-04 20:00:25,826 DEBUG   SenderThread:1959018 [sender.py:send():375] send: telemetry
+2024-02-04 20:00:25,827 DEBUG   SenderThread:1959018 [sender.py:send():375] send: config
+2024-02-04 20:00:26,302 INFO    Thread-12 :1959018 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/bizon/temp-cot/transformers-learning-dynamics/nanoGPT_extension/wandb/run-20240204_200025-pg67z4ym/files/config.yaml
+2024-02-04 20:00:26,302 INFO    Thread-12 :1959018 [dir_watcher.py:_on_file_created():278] file/dir created: /home/bizon/temp-cot/transformers-learning-dynamics/nanoGPT_extension/wandb/run-20240204_200025-pg67z4ym/files/wandb-summary.json
+2024-02-04 20:00:26,302 INFO    Thread-12 :1959018 [dir_watcher.py:_on_file_created():278] file/dir created: /home/bizon/temp-cot/transformers-learning-dynamics/nanoGPT_extension/wandb/run-20240204_200025-pg67z4ym/files/requirements.txt
+2024-02-04 20:00:26,302 INFO    Thread-12 :1959018 [dir_watcher.py:_on_file_created():278] file/dir created: /home/bizon/temp-cot/transformers-learning-dynamics/nanoGPT_extension/wandb/run-20240204_200025-pg67z4ym/files/output.log
+2024-02-04 20:00:26,302 INFO    Thread-12 :1959018 [dir_watcher.py:_on_file_created():278] file/dir created: /home/bizon/temp-cot/transformers-learning-dynamics/nanoGPT_extension/wandb/run-20240204_200025-pg67z4ym/files/wandb-metadata.json
+2024-02-04 20:00:28,301 INFO    Thread-12 :1959018 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/bizon/temp-cot/transformers-learning-dynamics/nanoGPT_extension/wandb/run-20240204_200025-pg67z4ym/files/output.log
+2024-02-04 20:00:30,832 DEBUG   HandlerThread:1959018 [handler.py:handle_request():144] handle_request: status_report
+2024-02-04 20:00:35,835 DEBUG   HandlerThread:1959018 [handler.py:handle_request():144] handle_request: status_report
+2024-02-04 20:00:40,523 DEBUG   HandlerThread:1959018 [handler.py:handle_request():144] handle_request: stop_status
+2024-02-04 20:00:40,523 DEBUG   SenderThread:1959018 [sender.py:send_request():402] send_request: stop_status
+2024-02-04 20:00:41,688 DEBUG   HandlerThread:1959018 [handler.py:handle_request():144] handle_request: status_report
+2024-02-04 20:00:46,690 DEBUG   HandlerThread:1959018 [handler.py:handle_request():144] handle_request: status_report
+2024-02-04 20:00:51,692 DEBUG   HandlerThread:1959018 [handler.py:handle_request():144] handle_request: status_report
+2024-02-04 20:00:55,523 DEBUG   HandlerThread:1959018 [handler.py:handle_request():144] handle_request: stop_status
+2024-02-04 20:00:55,523 DEBUG   SenderThread:1959018 [sender.py:send_request():402] send_request: stop_status
+2024-02-04 20:00:57,608 DEBUG   HandlerThread:1959018 [handler.py:handle_request():144] handle_request: status_report
+2024-02-04 20:00:58,319 INFO    Thread-12 :1959018 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/bizon/temp-cot/transformers-learning-dynamics/nanoGPT_extension/wandb/run-20240204_200025-pg67z4ym/files/config.yaml
+2024-02-04 20:01:02,737 DEBUG   HandlerThread:1959018 [handler.py:handle_request():144] handle_request: status_report
+2024-02-04 20:01:07,739 DEBUG   HandlerThread:1959018 [handler.py:handle_request():144] handle_request: status_report
+2024-02-04 20:01:10,523 DEBUG   HandlerThread:1959018 [handler.py:handle_request():144] handle_request: stop_status
+2024-02-04 20:01:10,523 DEBUG   SenderThread:1959018 [sender.py:send_request():402] send_request: stop_status
+2024-02-04 20:01:13,683 DEBUG   HandlerThread:1959018 [handler.py:handle_request():144] handle_request: status_report
+2024-02-04 20:01:18,686 DEBUG   HandlerThread:1959018 [handler.py:handle_request():144] handle_request: status_report
+2024-02-04 20:01:23,687 DEBUG   HandlerThread:1959018 [handler.py:handle_request():144] handle_request: status_report
+2024-02-04 20:01:25,470 DEBUG   SystemMonitor:1959018 [system_monitor.py:_start():159] Starting system metrics aggregation loop
+2024-02-04 20:01:25,472 DEBUG   SenderThread:1959018 [sender.py:send():375] send: stats
+2024-02-04 20:01:25,525 DEBUG   HandlerThread:1959018 [handler.py:handle_request():144] handle_request: stop_status
+2024-02-04 20:01:25,525 DEBUG   SenderThread:1959018 [sender.py:send_request():402] send_request: stop_status
+2024-02-04 20:01:29,650 DEBUG   HandlerThread:1959018 [handler.py:handle_request():144] handle_request: status_report
+2024-02-04 20:01:34,653 DEBUG   HandlerThread:1959018 [handler.py:handle_request():144] handle_request: status_report
+2024-02-04 20:01:39,655 DEBUG   HandlerThread:1959018 [handler.py:handle_request():144] handle_request: status_report
+2024-02-04 20:01:40,525 DEBUG   HandlerThread:1959018 [handler.py:handle_request():144] handle_request: stop_status
+2024-02-04 20:01:40,526 DEBUG   SenderThread:1959018 [sender.py:send_request():402] send_request: stop_status
+2024-02-04 20:01:44,662 DEBUG   HandlerThread:1959018 [handler.py:handle_request():144] handle_request: status_report
+2024-02-04 20:01:49,664 DEBUG   HandlerThread:1959018 [handler.py:handle_request():144] handle_request: status_report
+2024-02-04 20:01:54,664 DEBUG   HandlerThread:1959018 [handler.py:handle_request():144] handle_request: status_report
+2024-02-04 20:01:55,473 DEBUG   SenderThread:1959018 [sender.py:send():375] send: stats
+2024-02-04 20:01:55,524 DEBUG   HandlerThread:1959018 [handler.py:handle_request():144] handle_request: stop_status
+2024-02-04 20:01:55,524 DEBUG   SenderThread:1959018 [sender.py:send_request():402] send_request: stop_status
+2024-02-04 20:02:00,660 DEBUG   HandlerThread:1959018 [handler.py:handle_request():144] handle_request: status_report
+2024-02-04 20:02:05,661 DEBUG   HandlerThread:1959018 [handler.py:handle_request():144] handle_request: status_report
+2024-02-04 20:02:10,525 DEBUG   HandlerThread:1959018 [handler.py:handle_request():144] handle_request: stop_status
+2024-02-04 20:02:10,525 DEBUG   SenderThread:1959018 [sender.py:send_request():402] send_request: stop_status
+2024-02-04 20:02:10,687 DEBUG   HandlerThread:1959018 [handler.py:handle_request():144] handle_request: status_report
+2024-02-04 20:02:15,690 DEBUG   HandlerThread:1959018 [handler.py:handle_request():144] handle_request: status_report
+2024-02-04 20:02:20,693 DEBUG   HandlerThread:1959018 [handler.py:handle_request():144] handle_request: status_report
+2024-02-04 20:02:25,475 DEBUG   SenderThread:1959018 [sender.py:send():375] send: stats
+2024-02-04 20:02:25,525 DEBUG   HandlerThread:1959018 [handler.py:handle_request():144] handle_request: stop_status
+2024-02-04 20:02:25,526 DEBUG   SenderThread:1959018 [sender.py:send_request():402] send_request: stop_status
+2024-02-04 20:02:26,629 DEBUG   HandlerThread:1959018 [handler.py:handle_request():144] handle_request: status_report
+2024-02-04 20:02:31,630 DEBUG   HandlerThread:1959018 [handler.py:handle_request():144] handle_request: status_report
+2024-02-04 20:02:36,633 DEBUG   HandlerThread:1959018 [handler.py:handle_request():144] handle_request: status_report
+2024-02-04 20:02:40,526 DEBUG   HandlerThread:1959018 [handler.py:handle_request():144] handle_request: stop_status
+2024-02-04 20:02:40,526 DEBUG   SenderThread:1959018 [sender.py:send_request():402] send_request: stop_status
+2024-02-04 20:02:41,670 DEBUG   HandlerThread:1959018 [handler.py:handle_request():144] handle_request: status_report
+2024-02-04 20:02:46,673 DEBUG   HandlerThread:1959018 [handler.py:handle_request():144] handle_request: status_report
+2024-02-04 20:02:51,675 DEBUG   HandlerThread:1959018 [handler.py:handle_request():144] handle_request: status_report
+2024-02-04 20:02:55,477 DEBUG   SenderThread:1959018 [sender.py:send():375] send: stats
+2024-02-04 20:02:55,526 DEBUG   HandlerThread:1959018 [handler.py:handle_request():144] handle_request: stop_status
+2024-02-04 20:02:55,527 DEBUG   SenderThread:1959018 [sender.py:send_request():402] send_request: stop_status
+2024-02-04 20:02:56,687 DEBUG   HandlerThread:1959018 [handler.py:handle_request():144] handle_request: status_report
+2024-02-04 20:03:01,689 DEBUG   HandlerThread:1959018 [handler.py:handle_request():144] handle_request: status_report
+2024-02-04 20:03:06,691 DEBUG   HandlerThread:1959018 [handler.py:handle_request():144] handle_request: status_report
+2024-02-04 20:03:10,527 DEBUG   HandlerThread:1959018 [handler.py:handle_request():144] handle_request: stop_status
+2024-02-04 20:03:10,527 DEBUG   SenderThread:1959018 [sender.py:send_request():402] send_request: stop_status
+2024-02-04 20:03:12,598 DEBUG   HandlerThread:1959018 [handler.py:handle_request():144] handle_request: status_report
+2024-02-04 20:03:17,601 DEBUG   HandlerThread:1959018 [handler.py:handle_request():144] handle_request: status_report
+2024-02-04 20:03:22,603 DEBUG   HandlerThread:1959018 [handler.py:handle_request():144] handle_request: status_report
+2024-02-04 20:03:25,479 DEBUG   SenderThread:1959018 [sender.py:send():375] send: stats
+2024-02-04 20:03:25,526 DEBUG   HandlerThread:1959018 [handler.py:handle_request():144] handle_request: stop_status
+2024-02-04 20:03:25,527 DEBUG   SenderThread:1959018 [sender.py:send_request():402] send_request: stop_status
+2024-02-04 20:03:27,633 DEBUG   HandlerThread:1959018 [handler.py:handle_request():144] handle_request: status_report
+2024-02-04 20:03:32,635 DEBUG   HandlerThread:1959018 [handler.py:handle_request():144] handle_request: status_report
+2024-02-04 20:03:37,637 DEBUG   HandlerThread:1959018 [handler.py:handle_request():144] handle_request: status_report
+2024-02-04 20:03:40,527 DEBUG   HandlerThread:1959018 [handler.py:handle_request():144] handle_request: stop_status
+2024-02-04 20:03:40,527 DEBUG   SenderThread:1959018 [sender.py:send_request():402] send_request: stop_status
+2024-02-04 20:03:43,634 DEBUG   HandlerThread:1959018 [handler.py:handle_request():144] handle_request: status_report
+2024-02-04 20:03:48,636 DEBUG   HandlerThread:1959018 [handler.py:handle_request():144] handle_request: status_report
+2024-02-04 20:03:53,638 DEBUG   HandlerThread:1959018 [handler.py:handle_request():144] handle_request: status_report
+2024-02-04 20:03:55,480 DEBUG   SenderThread:1959018 [sender.py:send():375] send: stats
+2024-02-04 20:03:55,527 DEBUG   HandlerThread:1959018 [handler.py:handle_request():144] handle_request: stop_status
+2024-02-04 20:03:55,527 DEBUG   SenderThread:1959018 [sender.py:send_request():402] send_request: stop_status
+2024-02-04 20:03:59,607 DEBUG   HandlerThread:1959018 [handler.py:handle_request():144] handle_request: status_report
+2024-02-04 20:04:04,610 DEBUG   HandlerThread:1959018 [handler.py:handle_request():144] handle_request: status_report
+2024-02-04 20:04:09,611 DEBUG   HandlerThread:1959018 [handler.py:handle_request():144] handle_request: status_report
+2024-02-04 20:04:10,527 DEBUG   HandlerThread:1959018 [handler.py:handle_request():144] handle_request: stop_status
+2024-02-04 20:04:10,528 DEBUG   SenderThread:1959018 [sender.py:send_request():402] send_request: stop_status
+2024-02-04 20:04:14,668 DEBUG   HandlerThread:1959018 [handler.py:handle_request():144] handle_request: status_report
+2024-02-04 20:04:19,669 DEBUG   HandlerThread:1959018 [handler.py:handle_request():144] handle_request: status_report
+2024-02-04 20:04:24,671 DEBUG   HandlerThread:1959018 [handler.py:handle_request():144] handle_request: status_report
+2024-02-04 20:04:25,482 DEBUG   SenderThread:1959018 [sender.py:send():375] send: stats
+2024-02-04 20:04:25,527 DEBUG   HandlerThread:1959018 [handler.py:handle_request():144] handle_request: stop_status
+2024-02-04 20:04:25,528 DEBUG   SenderThread:1959018 [sender.py:send_request():402] send_request: stop_status
+2024-02-04 20:04:30,623 DEBUG   HandlerThread:1959018 [handler.py:handle_request():144] handle_request: status_report
+2024-02-04 20:04:35,625 DEBUG   HandlerThread:1959018 [handler.py:handle_request():144] handle_request: status_report
+2024-02-04 20:04:40,528 DEBUG   HandlerThread:1959018 [handler.py:handle_request():144] handle_request: stop_status
+2024-02-04 20:04:40,529 DEBUG   SenderThread:1959018 [sender.py:send_request():402] send_request: stop_status
+2024-02-04 20:04:41,593 DEBUG   HandlerThread:1959018 [handler.py:handle_request():144] handle_request: status_report
+2024-02-04 20:04:46,595 DEBUG   HandlerThread:1959018 [handler.py:handle_request():144] handle_request: status_report
+2024-02-04 20:04:51,597 DEBUG   HandlerThread:1959018 [handler.py:handle_request():144] handle_request: status_report
+2024-02-04 20:04:55,484 DEBUG   SenderThread:1959018 [sender.py:send():375] send: stats
+2024-02-04 20:04:55,528 DEBUG   HandlerThread:1959018 [handler.py:handle_request():144] handle_request: stop_status
+2024-02-04 20:04:55,529 DEBUG   SenderThread:1959018 [sender.py:send_request():402] send_request: stop_status
+2024-02-04 20:04:56,666 DEBUG   HandlerThread:1959018 [handler.py:handle_request():144] handle_request: status_report
+2024-02-04 20:05:01,669 DEBUG   HandlerThread:1959018 [handler.py:handle_request():144] handle_request: status_report
+2024-02-04 20:05:06,671 DEBUG   HandlerThread:1959018 [handler.py:handle_request():144] handle_request: status_report
+2024-02-04 20:05:10,529 DEBUG   HandlerThread:1959018 [handler.py:handle_request():144] handle_request: stop_status
+2024-02-04 20:05:10,530 DEBUG   SenderThread:1959018 [sender.py:send_request():402] send_request: stop_status
+2024-02-04 20:05:12,593 DEBUG   HandlerThread:1959018 [handler.py:handle_request():144] handle_request: status_report
+2024-02-04 20:05:17,594 DEBUG   HandlerThread:1959018 [handler.py:handle_request():144] handle_request: status_report
+2024-02-04 20:05:22,596 DEBUG   HandlerThread:1959018 [handler.py:handle_request():144] handle_request: status_report
+2024-02-04 20:05:25,486 DEBUG   SenderThread:1959018 [sender.py:send():375] send: stats
+2024-02-04 20:05:25,635 INFO    memory    :1959018 [interfaces.py:monitor():140] Process proc.memory.rssMB has exited.
+2024-02-04 20:05:25,635 DEBUG   SystemMonitor:1959018 [system_monitor.py:_start():166] Finished system metrics aggregation loop
+2024-02-04 20:05:25,636 DEBUG   SystemMonitor:1959018 [system_monitor.py:_start():170] Publishing last batch of metrics
+2024-02-04 20:05:25,637 DEBUG   SenderThread:1959018 [sender.py:send():375] send: stats
+2024-02-04 20:05:26,553 INFO    MainThread:1959018 [internal.py:handle_exit():76] Internal process exited

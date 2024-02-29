@@ -70,17 +70,10 @@ def main(cfg):
         dataloader = train_dataloader if split == 'train' else val_dataloader
         return dataloader
 
-    # Load DAG and token_map to check paths:
-    path = cfg.dataset_path 
-    scm_file_path = path + 'random_frozen_scm_used.npz'
-    scm_dict = np.load(scm_file_path, allow_pickle=True)
-    with open(path + 'dag_path_scm.pkl', "rb") as f:
-        dag =  pickle.load(f)
-    token_map = scm_dict['token_map'].item()
 
     # model init
     # add + 1 to meta_vocab_size to account for padding token with TOKENID=0
-    model_args = dict(n_layer=cfg.n_layer, n_head=cfg.n_head, n_embd=cfg.n_embd, block_size=cfg.block_size, bias=cfg.bias, vocab_size=meta_vocab_size+1, dropout=cfg.dropout)
+    model_args = dict(n_layer=cfg.n_layer, n_head=cfg.n_head, n_embd=cfg.n_embd, block_size=cfg.block_size, bias=cfg.bias, vocab_size=meta_vocab_size, dropout=cfg.dropout)
                     
     if cfg.init_from == 'scratch':
         # init a new model from scratch
@@ -212,11 +205,9 @@ def main(cfg):
                         for k in range(num_samples):
                             x,_ = next(dataloader)
                             # Generate a list of lists of sequences
-                            # Each sublist of size batch_size x max_new_tokens + n
                             generated_paths.append(model.generate(x[0:,0:n].to(device), max_new_tokens, temperature=temperature, top_k=top_k))
                 model.train()
-                edge_accuracies, does_end_at_targets, path_lengths = check_generated_path_accuracy(dag, generated_paths, token_map)
-                edge_accuracies[np.isnan(edge_accuracies)] = 0
+
                 
 
                 wandb.log({
@@ -224,9 +215,6 @@ def main(cfg):
                     "train/loss": losses['train'],
                     "val/loss": losses['val'],
                     "lr": lr,
-                    "edge_accuracies": np.mean(edge_accuracies),
-                    "does_end_at_target": np.mean(does_end_at_targets),
-                    "path_lengths": np.mean(path_lengths)
                 })
 
             # evaluate and checkpoint model
